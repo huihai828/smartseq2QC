@@ -1,0 +1,24 @@
+
+analysis_dir: ./Analysis/scqc_reqs-1.1/4plates.run2
+#samplesheet: SampleSheet.all_plates.unix.csv
+samplesheet: SampleSheet.PPBFX-1209.3_meta.v2.unix.csv
+quant_dir: quants_dir
+qcout_dir: qc_dir
+fastq_dir: Reads
+species: Bos_taurus_with_TParva
+
+plate_ids: ['CUB35DAY0','CUB35DAY7','CUB37DAY0','CUB37DAY7']
+
+
+# choose the count type from kallisto output
+count_type: est_counts
+
+# Paths to databases
+mtnamefile: ./Databases/scqc/Bos_taurus/ARS-UCD1.2/MT_cow_vector.rds
+idx: ./Databases/scqc/Bos_taurus.with.Theileria_theileria_parva/ARS-UCD1.2.and.PiroplasmaDB-55/Bos_taurus.ARS-UCD1.2.with.PiroplasmaDB-55_TparvaMuguga.kallisto.idx
+trans2gen_tsv: ./Databases/scqc/Bos_taurus.with.Theileria_theileria_parva/ARS-UCD1.2.and.PiroplasmaDB-55/Bos_taurus.ARS-UCD1.2.with.PiroplasmaDB-55_TparvaMuguga.transcript_to_gene_mapping.tsv
+
+
+
+
+

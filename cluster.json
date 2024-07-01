@@ -1,0 +1,49 @@
+{
+    "__default__": {
+        "cores": 4,
+        "J": "smartseq2QC",
+        "time": "12:00:00",
+        "exclude": "",
+        "partition": "ei-medium,ei-long"
+    },
+    "kallisto_quant": {
+        "cores": 8,
+        "mem": 20480,
+        "partition": "ei-medium,ei-long"
+    },
+    "kallisto_mapping_scrape": {
+        "cores": 2,
+        "mem": 10240,
+        "partition": "ei-medium"
+    },
+    "merge_kallisto_quant": {
+        "cores": 2,
+        "mem": 10240,
+        "partition": "ei-medium"
+    },
+    "qc": {
+        "cores": 2,
+        "mem": 10240,
+        "partition": "ei-medium"
+    },
+    "gs": {
+        "cores": 2,
+        "mem": 10240,
+        "partition": "ei-medium"
+    },
+    "doc": {
+        "cores": 2,
+        "mem": 10240,
+        "partition": "ei-medium"
+    },
+    "plate_merge": {
+        "cores": 2,
+        "mem": 10240,
+        "partition": "ei-medium"
+    },
+    "tx2gene": {
+        "cores": 2,
+        "mem": 10240,
+        "partition": "ei-medium"
+    }
+}
