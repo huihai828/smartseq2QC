@@ -18,8 +18,10 @@ QCOUT_DIR = config["qcout_dir"]
 PLATE_IDS = config["plate_ids"]
 count_type = config["count_type"]
 
+
 samplesheet = pd.read_csv(config["samplesheet"])
 SAMPLES = samplesheet[["Sample_Plate", "Sample_Name", "Sample_ID",]].agg("_".join, axis=1) \
+          + "_" + config["read_infix"] \
           + "_" + samplesheet[["index", "index2"]].agg("-".join, axis=1) \
           + "_L00" + samplesheet["Lane"].astype(str)
 
@@ -45,8 +47,8 @@ rule all:
 
 rule kallisto_quant:
     input:
-        read1 = os.path.join(FASTQ_DIR, "{sample}_R1.fastq.gz"),
-        read2 = os.path.join(FASTQ_DIR, "{sample}_R2.fastq.gz")
+        read1 = os.path.join(FASTQ_DIR, "{sample}_R1.fastq"),
+        read2 = os.path.join(FASTQ_DIR, "{sample}_R2.fastq")
     output:
         os.path.join(f"{QUANT_DIR}", "{sample}", "run_info.json")
     params:

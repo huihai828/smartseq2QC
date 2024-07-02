@@ -6,6 +6,7 @@ quant_dir: quants_dir
 qcout_dir: qc_dir
 fastq_dir: Reads
 species: Bos_taurus_with_TParva
+read_infix: 20230908_LH00145_0011_A227CMVLT3
 
 plate_ids: ['CUB35DAY0','CUB35DAY7','CUB37DAY0','CUB37DAY7']
 
